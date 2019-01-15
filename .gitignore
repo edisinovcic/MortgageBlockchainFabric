@@ -1,4 +1,4 @@
 fabric-samples
-channels
-crypto-config
-orderer
+**/channels
+**/crypto-config
+**/orderer
