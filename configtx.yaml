@@ -1,54 +1,3 @@
-
-Profiles:
-
-    MRTGEXCHGOrdererGenesis:
-        Orderer:
-            <<: *OrdererDefaults
-            Organizations:
-                - *OrdererOrg
-        Consortiums:
-            MRTGEXCHG:
-                Organizations:
-                    - *Bank
-                    - *Insurance
-                    - *Registry
-                    - *Title
-                    - *Appraiser
-                    - *Audit
-                    - *Fico
-
-    RecordsChannel:
-        Consortium: MRTGEXCHG
-        Application:
-            <<: *ApplicationDefaults
-            Organizations:
-                  - *Bank
-                  - *Insurance
-                  - *Registry
-                  - *Title
-                  - *Appraiser
-                  - *Audit
-    LendingChannel:
-        Consortium: MRTGEXCHG
-        Application:
-            <<: *ApplicationDefaults
-            Organizations:
-              - *Bank
-              - *Insurance
-              - *Audit
-              - *Fico
-              - *Title
-    BooksChannel:
-        Consortium: MRTGEXCHG
-        Application:
-            <<: *ApplicationDefaults
-            Organizations:
-              - *Bank
-              - *Insurance
-              - *Title
-              - *Appraiser
-              - *Audit
-              - *Registry              
 Organizations:
 
     - &OrdererOrg
@@ -145,3 +94,53 @@ Orderer: &OrdererDefaults
 
 Application: &ApplicationDefaults
     Organizations:
+
+Profiles:
+    MRTGEXCHGOrdererGenesis:
+        Orderer:
+            <<: *OrdererDefaults
+            Organizations:
+                - *OrdererOrg
+        Consortiums:
+            MRTGEXCHG:
+                Organizations:
+                    - *Bank
+                    - *Insurance
+                    - *Registry
+                    - *Title
+                    - *Appraiser
+                    - *Audit
+                    - *Fico
+
+    RecordsChannel:
+        Consortium: MRTGEXCHG
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+                  - *Bank
+                  - *Insurance
+                  - *Registry
+                  - *Title
+                  - *Appraiser
+                  - *Audit
+    LendingChannel:
+        Consortium: MRTGEXCHG
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+              - *Bank
+              - *Insurance
+              - *Audit
+              - *Fico
+              - *Title
+    BooksChannel:
+        Consortium: MRTGEXCHG
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
+              - *Bank
+              - *Insurance
+              - *Title
+              - *Appraiser
+              - *Audit
+              - *Registry              
